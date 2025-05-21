@@ -40,4 +40,19 @@ public class TaskService {
 
         taskRepository.delete(task);
     }
+
+    /**
+     * Marks a task as completed
+     *
+     * @param id The ID of the task to mark as completed
+     * @return The updated Task
+     * @throws ResourceNotFoundException if task not found
+     */
+    public Task markTaskAsCompleted(Long id) {
+        Task task = getTaskById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Task not found with id: " + id));
+
+        task.setStatus("completed");
+        return taskRepository.save(task);
+    }
 }
