@@ -22,6 +22,7 @@ spring:
           account-name: ${AZURE_STORAGE_ACCOUNT_NAME}
           account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
           container-name: ${AZURE_STORAGE_CONTAINER_NAME}
+          enabled: true
 
 azure:
   blob:
