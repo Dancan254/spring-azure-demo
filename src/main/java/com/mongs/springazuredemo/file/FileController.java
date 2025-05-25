@@ -31,7 +31,6 @@ public class FileController {
      * @param file The image file to upload
      * @return JSON response with the image URL
      */
-    @PostMapping("/upload")
     @Operation(summary = "Upload an image", description = "Uploads an image file to Azure Blob Storage and returns the URL")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Image uploaded successfully",
@@ -40,6 +39,7 @@ public class FileController {
             @ApiResponse(responseCode = "500", description = "Internal server error",
                     content = @Content)
     })
+    @PostMapping("/upload")
     public ResponseEntity<Map<String, String>> uploadImage(
             @Parameter(description = "Image file to upload (JPG, PNG, GIF, etc.)", required = true)
             @RequestParam("file") MultipartFile file) {
