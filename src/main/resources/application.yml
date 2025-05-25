@@ -19,13 +19,13 @@ spring:
     azure:
       storage:
         blob:
-          account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
           account-name: ${AZURE_STORAGE_ACCOUNT_NAME}
-          container-name: ${AZURE_STORAGE_CONTAINER_NAME:images}
+          account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
+          container-name: ${AZURE_STORAGE_CONTAINER_NAME}
 
 azure:
   blob:
-    container-name: ${AZURE_STORAGE_CONTAINER_NAME:images}
+    container-name: ${AZURE_STORAGE_CONTAINER_NAME}
 
 springdoc:
   api-docs:
