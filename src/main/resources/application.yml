@@ -23,9 +23,9 @@ spring:
         blob:
           account-name: ${AZURE_STORAGE_ACCOUNT_NAME}
           account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
+          container-name: ${AZURE_STORAGE_CONTAINER_NAME}
           enabled: true
 
-# Custom Azure properties for your service
 azure:
   blob:
     container-name: ${AZURE_STORAGE_CONTAINER_NAME}
@@ -39,7 +39,6 @@ springdoc:
     operations-sorter: method
     tags-sorter: alpha
 
-# Optional: Enable debug logging to troubleshoot
 logging:
   level:
     com.azure.spring.cloud.autoconfigure: DEBUG
