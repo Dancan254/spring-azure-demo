@@ -17,7 +17,7 @@ public class AzureBlobService {
 
     private final BlobServiceClient blobServiceClient;
 
-    @Value("${app.azure.blob.container-name}")
+    @Value("${spring.cloud.azure.storage.blob.container-name}")
     private String containerName;
     /**
      * upload image to Azure Blob Storage
