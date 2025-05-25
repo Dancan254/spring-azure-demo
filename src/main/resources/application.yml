@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+# Database Connection Properties
+spring:
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}?sslmode=require
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+
+# Hibernate Properties
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: update
+    show-sql: true
+  cloud:
+    azure:
+      storage:
+        blob:
+          account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
+          account-name: ${AZURE_STORAGE_ACCOUNT_NAME}
+          container-name: ${AZURE_STORAGE_CONTAINER_NAME:images}
+
+azure:
+  blob:
+    container-name: ${AZURE_STORAGE_CONTAINER_NAME:images}
