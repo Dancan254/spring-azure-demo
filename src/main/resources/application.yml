@@ -8,29 +8,29 @@ spring:
     username: ${PGUSER}
     password: ${PGPASSWORD}
 
-# Hibernate Properties
+  # Hibernate Properties
   jpa:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         ddl-auto: update
     show-sql: true
+
+  # Spring Cloud Azure Configuration
   cloud:
     azure:
       storage:
         blob:
           account-name: ${AZURE_STORAGE_ACCOUNT_NAME}
           account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
-          container-name: ${AZURE_STORAGE_CONTAINER_NAME}
           enabled: true
 
+# Custom Azure properties for your service
 azure:
   blob:
     container-name: ${AZURE_STORAGE_CONTAINER_NAME}
-  storage:
-    account-name: ${AZURE_STORAGE_ACCOUNT_NAME}
-    account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
 
+# SpringDoc Configuration
 springdoc:
   api-docs:
     path: /api-docs
@@ -38,3 +38,9 @@ springdoc:
     path: /swagger-ui.html
     operations-sorter: method
     tags-sorter: alpha
+
+# Optional: Enable debug logging to troubleshoot
+logging:
+  level:
+    com.azure.spring.cloud.autoconfigure: DEBUG
+    org.springframework.boot.autoconfigure: DEBUG
