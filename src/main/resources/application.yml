@@ -23,6 +23,13 @@ spring:
           account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
           container-name: ${AZURE_STORAGE_CONTAINER_NAME}
 
+azure:
+  blob:
+    container-name: ${AZURE_STORAGE_CONTAINER_NAME}
+  storage:
+    account-name: ${AZURE_STORAGE_ACCOUNT_NAME}
+    account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
+
 springdoc:
   api-docs:
     path: /api-docs
