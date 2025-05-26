@@ -26,10 +26,10 @@ spring:
           container-name: ${AZURE_STORAGE_CONTAINER_NAME}
           enabled: true
 
-app:
-  azure:
-    blob:
-      container-name: ${AZURE_STORAGE_CONTAINER_NAME}
+#app:
+#  azure:
+#    blob:
+#      container-name: ${AZURE_STORAGE_CONTAINER_NAME}
 
 # SpringDoc Configuration
 springdoc:
